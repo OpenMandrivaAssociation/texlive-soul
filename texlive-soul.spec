@@ -56,3 +56,17 @@ soulutf8.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.4-2
++ Revision: 756077
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.4-1
++ Revision: 719558
+- texlive-soul
+- texlive-soul
+- texlive-soul
+- texlive-soul
+
