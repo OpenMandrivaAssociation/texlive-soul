@@ -6,7 +6,7 @@
 # catalog-version 2.4
 Name:		texlive-soul
 Version:	2.4
-Release:	5
+Release:	6
 Summary:	Hyphenation for letterspacing, underlining, and more
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/soul
