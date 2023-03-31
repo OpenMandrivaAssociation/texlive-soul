@@ -1,6 +1,6 @@
 Name:		texlive-soul
 Version:	56495
-Release:	1
+Release:	2
 Summary:	Hyphenation for letterspacing, underlining, and more
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/soul
