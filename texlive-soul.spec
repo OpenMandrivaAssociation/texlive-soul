@@ -1,5 +1,5 @@
 Name:		texlive-soul
-Version:	65908
+Version:	67365
 Release:	1
 Summary:	Hyphenation for letterspacing, underlining, and more
 Group:		Publishing
