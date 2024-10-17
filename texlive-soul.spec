@@ -3,7 +3,7 @@ Version:	67365
 Release:	1
 Summary:	Hyphenation for letterspacing, underlining, and more
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/soul
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/soul
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/soul.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/soul.doc.r%{version}.tar.xz
