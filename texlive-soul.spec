@@ -1,50 +1,27 @@
-Name:		texlive-soul
-Version:	67365
-Release:	1
+%global tl_name soul
+%global tl_revision 79461
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	3.2
+Release:	%{tl_revision}.1
 Summary:	Hyphenation for letterspacing, underlining, and more
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/soul
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/soul.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/soul.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/soul.source.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/macros/generic/soul
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/soul.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/soul.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/soul.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Provides hyphenatable spacing out (letterspacing), underlining,
-striking out, etc., using the TeX hyphenation algorithm to find
-the proper hyphens automatically. The package also provides a
-mechanism that can be used to implement similar tasks, that
-have to treat text syllable by syllable. This is shown in two
-examples. The package itself does not support UTF-8 input in
-ordinary (PDF)LaTeX; some UTF-8 support is offered by package
-soulutf8.
+The package provides hyphenable spacing out (letterspacing),
+underlining, striking out, etc., using the TeX hyphenation algorithm to
+find the proper hyphens automatically. It also provides a mechanism that
+can be used to implement similar tasks, that have to treat text syllable
+by syllable. This is shown in two examples. This version is a merge of
+the original soul package from Melchior Franz and the soulutf8 package
+from Heiko Oberdiek and supports also UTF8.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/generic/soul
-%doc %{_texmfdistdir}/doc/generic/soul
-#- source
-%doc %{_texmfdistdir}/source/generic/soul
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
